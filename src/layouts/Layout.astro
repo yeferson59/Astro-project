@@ -10,7 +10,7 @@ const { title } = Astro.props;
 ---
 
 <!doctype html>
-<html lang="en">
+<html lang="es">
 	<head>
 		<meta charset="UTF-8" />
 		<meta name="description" content="Astro description" />
@@ -21,8 +21,8 @@ const { title } = Astro.props;
 	</head>
 	<body>
 		<Header/>
-		<main>
-			<slot/>
+		<main class="mx-8 my-4">
+			<slot />
 		</main>
 		<Footer/>
 	</body>
@@ -30,8 +30,26 @@ const { title } = Astro.props;
 <style is:global>
 	html {
 		font-family: system-ui, sans-serif;
-		background: #13151a;
+		background: #DCF2F1;
 		background-size: 224px;
-		color: white;
+		color: black;
+	}
+	html.dark {
+    	background-color: #0F1035;
+		color: #DCF2F1;
+	}
+	.dark .nav-links a {
+		color: #DCF2F1;
+		@media screen and (max-width: 767px){
+			color: black;
+		}
+	}
+	body{
+		display: flex;
+		flex-direction: column;
+		min-height: 100vh;
+	}
+	Footer{
+		margin-top: auto;
 	}
 </style>

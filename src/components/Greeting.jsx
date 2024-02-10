@@ -8,9 +8,12 @@ export default function Greeting({messages}) {
 
   return (
     <div>
-      <h3>{greeting} ¡Gracias por tu visita!</h3>
-      <button onClick={() => setGreeting(randomMessage())}>
-        Nuevo saludo
+      <h3>
+        ¡Gracias por tu visita!
+        Aquí puedes encontar sobre {greeting}
+      </h3>
+      <button  class=" flex flex-row justify-center" onClick={() => setGreeting(randomMessage())}>
+        Continuar
       </button>
     </div>
   );

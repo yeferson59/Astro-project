@@ -25,6 +25,7 @@ const { posts }: { posts: any[] } = Astro.props;
 ---
 
 <Layout title={tag}>
+  
   {
     posts.map((post: any) => (
       <BlogPost url={post.url} title={post.frontmatter.title} />

@@ -1,18 +1,23 @@
 ---
 import Layout from '../layouts/Layout.astro';
-import '../styles/global.css';
 import Greeting from '../components/Greeting';
 ---
 
 <Layout title="TecnoSoft">
-	<h1>hola mundo</h1>
-	<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Harum, enim! Excepturi doloremque facilis laboriosam corporis in error accusantium corrupti exercitationem, vel dolorum eos ea repellat maxime! Maxime, beatae. Eaque, voluptatem.</p>
-  <Greeting client:load messages={["Hej", "Hallo", "Hola", "Habari"]} />
+	<h1 class="flex flex-row justify-center font-bold text-4xl my-4">Bienvenidos a mi pagina web</h1>
+	<div class="flex flex-col justify-center text-center my-2 text-green-500">
+		<p class="text-xl opacity-60">
+			Un lugar dónde puedes aprender y encontrar información interesante y otras cosas proximamente.
+		</p>
+		<button type="button">
+			<a href="/blog/" class="my-10">
+				Mi blog
+			</a>
+		</button>
+	</div>
+	<section class="m-w-screen bg-[#DCF2F1] h-20">
+		<p class="flex flex-row justify-center">
+			<Greeting client:load messages={["Programación", "Sucesos", "Inversión", "Emprendimientos"]} />
+		</p>
+	</section>
 </Layout>
-
-<style>
-    h1 {
-      color: #1b1a1a;
-      font-size: 3rem;
-    }
-</style>

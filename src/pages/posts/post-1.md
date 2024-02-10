@@ -1,9 +1,9 @@
 ---
 layout: ../../layouts/MarkdownPostLayout.astro
 title: 'Mi primera publicación en el blog'
-pubDate: 2022-07-01
+pubDate: 2024-02-9
 description: 'Esta es la primera publicación de mi nuevo blog Astro.'
-author: 'Alumno de Astro'
+author: 'Yeferson Toloza'
 image:
     url: 'https://docs.astro.build/assets/full-logo-light.png'
     alt: 'El logotipo completo de Astro.'

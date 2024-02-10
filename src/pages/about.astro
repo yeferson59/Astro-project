@@ -1,20 +1,19 @@
 ---
 import Layout from "../layouts/Layout.astro"
-import '../styles/global.css';
 
 const pageTitle = "Sobre mi";
 const identity = {
-  firstName: "Sarah",
-  country: "Canada",
-  occupation: "Escritor técnico",
-  hobbies: ["fotografia", "observación de aves", "peñarol"],
+  firstName: "Yeferson",
+  country: "Colombia",
+  occupation: "Estudiante de Ingeniería de Sistemas",
+  hobbies: [ "Emprendedor", "Programdor", "Inversor"],
 };
 
-const skills = ["HTML", "CSS", "JavaScript", "React", "Astro", "Redacción de documentos"];
+const skills = ["HTML", "CSS", "JavaScript", "Angular.js", "Astro", "Redacción de documentos"];
 
 const happy = true;
-const finished = false;
-const goal = 3;
+const finished = true;
+let goal = 3;
 const skillColor = "navy";
 const fontWeight = "bold";
 const textCase = "uppercase";
@@ -25,24 +24,24 @@ const textCase = "uppercase";
     <p>He aquí algunos datos sobre mí:</p>
     <ul>
         <li class="skill">Me llamo {identity.firstName}.</li>
-        <li class=skill">Vivo en {identity.country} y trabajo como {identity.occupation}.</li>
+        <li class=skill">Vivo en {identity.country} y mi ocupación es: {identity.occupation}.</li>
         {identity.hobbies.length >= 2 &&
-            <li class="skill">Dos de mis aficiones son: {identity.hobbies[0]} y {identity.hobbies[1]}</li>
+            <li class="skill">Dos de mis aficiones son: {identity.hobbies[0]} e {identity.hobbies[2]}</li>
         }
     </ul>
     <p>Mis habilidades son:</p>
     <ul>
         {skills.map((skill) => <li class="skill">{skill}</li>)}
     </ul>
-    {happy && <p>¡Estoy feliz de aprender Astro!</p>}
+    {happy && <p>¡Estoy feliz de aprender Astro y conte FrameWork puede hacer hacer te sitio web!</p>}
 
-    {finished && <p>¡He terminado este tutorial!</p>}
+    {finished && <p>¡He terminado lo más basico de mi blog y esta pagina ira creciendo durante todo este tiempo!</p>}
 
-    {goal === 3 ? <p>Mi objetivo es terminar en 3 días.</p> : <p>Mi objetivo no son 3 días.</p>}
+    {goal == 5 ? <p>Mi objetivo es terminar en 5 días este proyecto que es el blog.</p> : <p>Mi objetivo debí extenderlo.</p>}
 </Layout>
 <style define:vars={{skillColor, fontWeight, textCase}} >
     h1 {
-      color: purple;
+      color: #be4710;
       font-size: 4rem;
     }
     .skill {
