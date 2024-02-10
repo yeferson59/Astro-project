@@ -1,11 +1,13 @@
 ---
 import Layout from '../layouts/Layout.astro';
 import '../styles/global.css';
+import Greeting from '../components/Greeting';
 ---
 
 <Layout title="TecnoSoft">
 	<h1>hola mundo</h1>
 	<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Harum, enim! Excepturi doloremque facilis laboriosam corporis in error accusantium corrupti exercitationem, vel dolorum eos ea repellat maxime! Maxime, beatae. Eaque, voluptatem.</p>
+  <Greeting client:load messages={["Hej", "Hallo", "Hola", "Habari"]} />
 </Layout>
 
 <style>
